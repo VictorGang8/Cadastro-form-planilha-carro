@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agendamento de Test Drive e Cotação de Veículos">
+  <title>Rota Motors - Atendimento Exclusivo</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main class="form-container">
+    <form id="formulario" novalidate>
+      <div class="form-header">
+        <h1>Atendimento Rota Motors</h1>
+        <p>Preencha os dados abaixo para falar com um de nossos consultores.</p>
+      </div>
+
+      <div class="field-group">
+        <label for="nome">Nome completo</label>
+        <input 
+          type="text" 
+          id="nome" 
+          name="nome" 
+          placeholder="Seu nome"
+          autocomplete="name" 
+          required
+        >
+      </div>
+
+      <div class="field-group">
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input 
+          type="tel" 
+          id="telefone" 
+          name="telefone" 
+          placeholder="(00) 00000-0000"
+          autocomplete="tel" 
+          required
+        >
+      </div>
+
+      <div class="field-group">
+        <label for="modelo">Veículo de interesse</label>
+        <input 
+          type="text" 
+          id="modelo" 
+          name="modelo" 
+          placeholder="Ex: SUV, Sedan, marca ou modelo específico"
+          required
+        >
+      </div>
+
+      <div class="field-group">
+        <label for="atendimento">Motivo do contato</label>
+        <select id="atendimento" name="atendimento" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="test_drive">Agendar Test Drive</option>
+          <option value="cotacao">Cotação de Veículo</option>
+          <option value="financiamento">Condições de Financiamento</option>
+        </select>
+      </div>
+
+      <div class="field-group">
+        <label for="mensagem">Observações</label>
+        <textarea 
+          id="mensagem" 
+          name="mensagem" 
+          placeholder="Tem um veículo para troca? Preferência de cor?"
+          rows="3" 
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit">Solicitar Contato</button>
+
+      <div id="aviso" class="aviso-status" aria-live="polite"></div>
+    </form>
+  </main>
+
+</body>
+</html>

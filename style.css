@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Paleta Dark Premium (Carbono e Vermelho Fosco) */
+  --bg-color: #0a0a0c;
+  --surface-color: #141417;
+  --input-bg: #1c1c21;
+  --border-color: #2b2b33;
+  --border-focus: #4b4b56;
+  
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  
+  --brand-color: #c92a2a;
+  --brand-hover: #a61e1e;
+
+  --transition: 0.15s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  background-image: radial-gradient(circle at top, #141417 0%, #0a0a0c 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+form {
+  background-color: var(--surface-color);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-header {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.25rem;
+}
+
+.form-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.form-header p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.field-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  padding: 0.85rem 1rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #52525b;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.9rem;
+  background-color: var(--brand-color);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+button:hover {
+  background-color: var(--brand-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.aviso-status {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  min-height: 1.2rem;
+}
